@@ -2,6 +2,17 @@ const URL = 'https://fakestoreapi.com/'
 
 const products_box = document.querySelector('.products');
 
+const categoryButtonAll = document.querySelectorAll('.new-arrivals-button');
+
+categoryButtonAll.forEach((btn, index)=> {
+   btn.addEventListener('click', () => {
+      console.log(btn);
+      console.log(index);
+      
+      btn.classList.add('active');
+   })
+})
+
 const category = [
    "men's clothing",
    "women's clothing",

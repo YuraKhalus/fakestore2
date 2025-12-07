@@ -46,7 +46,6 @@
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .new-arrivals{
-    border: 2px red solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,8 +66,8 @@
 }
 .new-arrivals-buttons-container{
     display: flex;
-    justify-content: space-between;
     max-width: 1155px;
+    gap: 30px;
 }
 .new-arrivals-button{
     width: 207px;
