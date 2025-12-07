@@ -45,3 +45,43 @@
    cursor: pointer;
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
+.new-arrivals{
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.new-arrivals-title{
+    font-size: 46px;
+    font-family: 'Volkhov';
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+.new-arrivals-text{
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 614px;
+    margin-bottom: 50px;
+}
+.new-arrivals-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1155px;
+}
+.new-arrivals-button{
+    width: 207px;
+    height: 56px;
+    border: none;
+    background-color: #FAFAFA;
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 400;
+}
+.active{
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 20px 35px 0px #00000026;
+}
