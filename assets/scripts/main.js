@@ -4,14 +4,25 @@ const products_box = document.querySelector('.products');
 
 const categoryButtonAll = document.querySelectorAll('.new-arrivals-button');
 
-categoryButtonAll.forEach((btn, index)=> {
-   btn.addEventListener('click', () => {
-      console.log(btn);
-      console.log(index);
+// categoryButtonAll.forEach((btn, index)=> {
+//    btn.addEventListener('click', () => {
+//       // console.log(btn);
+//       // console.log(index);
       
+//       btn.classList.add('active');
+//       getProduct(index);
+//    })
+// })
+categoryButtonAll.forEach((btn, index) =>{
+   btn.addEventListener('click', ()=>{
+      categoryButtonAll.forEach((btn) =>{
+         btn.classList.remove('active');
+      })
       btn.classList.add('active');
+      getProduct(index);
    })
 })
+
 
 const category = [
    "men's clothing",
@@ -22,10 +33,11 @@ const category = [
 
 // const listOfCategoryProducts = [];
 
+function getProduct(index){
 fetch(`${URL}/products`)
    .then(response => response.json())
    .then(data => {
-      const listOfCategoryProducts = data.filter(product => product.category === category[0])
+      const listOfCategoryProducts = data.filter(product => product.category === category[index])
       console.log(listOfCategoryProducts);
       listOfCategoryProducts.forEach(product => {
          console.log(product);
@@ -43,3 +55,5 @@ fetch(`${URL}/products`)
          `
       });
    })
+}
+
