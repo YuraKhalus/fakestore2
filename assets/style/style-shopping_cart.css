@@ -42,7 +42,7 @@
 
 }
 
-.text_product{
+/* .text_product{
     margin-top: 118px;
     margin-left: 30px;
     width: 84px;
@@ -58,7 +58,7 @@
 
 
 .text_price,
-.text_quantity,
+.text_qInstrument vibrant element. You know this, yeah. Click. I know what's a book, book, blog, price wish. Margin writes the pixel. uantity,
 .text_total {
     display: inline-block;
     margin-left: 270px;
@@ -76,17 +76,28 @@
 .text_product{
     display: inline-block;
     margin-left: 45px;
-}
+} */
 
 .line{
     margin-top: 35px;
 }
 
 .card{
-    width: 366px;
+    width: 100%;
     height: 225px;
     margin-top: 35px;
     margin-bottom: 35px;
+    display: flex;
+    /* justify-content: space-between; */
+    
+}
+
+.block{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 50px;
+
 }
 
 .title_card{
@@ -102,7 +113,21 @@
 
 .text_color{
     margin-left: 190px;
-    /* font-family: ; */
+    font-family: Volkhov;
+    margin-top: 14px;
+    position: absolute;
+    width: 118px;
+    height: 42px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #8A8A8A;
 }
 
 .card_photo{
@@ -110,4 +135,65 @@
     width: 168px;
     height: 225px;
     object-fit: cover;
+}
+
+.remove_text{
+    margin-left: 190px;
+    margin-top: 70px;
+    text-decoration: underline;
+    font-weight: 400px;
+    position: absolute;
+    width: 90px;
+    height: 42px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: #8A8A8A;
+}
+
+.price_card{
+    /* margin-left: 120px; */
+    position: absolute;
+    width: 66px;
+    height: 32px;
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+}   
+
+.photo_block{
+    display: inline-block;
+    /* width: 366px; */
+    height: 225px;
+    position: relative;
+    min-width: 366px;
+}
+
+.block_price{
+    display: inline-block;
+    width: 100px;
+    height: 225px;
+    position: relative;
+    /* margin-right: 100px; */
+
+}
+
+.cards_items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 73.25px;
 }
