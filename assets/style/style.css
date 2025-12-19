@@ -192,6 +192,7 @@
 .modal-container p{
    font-size: 28px;
    margin-top: 10px;
+   font-family: Poppins;
 }
 .modal-container p span{
    font-weight: bold;
@@ -205,7 +206,7 @@
 }
 .product-image{
    width: 168px;
-   height: 225px;
+   height: 180px;
 }
 .product-info-less{
    margin-left: 12px;
@@ -221,9 +222,13 @@
 }
 .btn-take-product{
    border: none;
+   background: none;
+   font-size: 35px;
 }
 .btn-add-product{
    border: none;
+   background: none;
+   font-size: 35px;
 }
 .amount{
    background-color: #F1F1F1;
@@ -232,10 +237,46 @@
    border-radius: 8px;
    padding: 10px 10px;
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center
 }
 .product-amount{
-   font-size: 26px;
+   font-size: 33px;
    color: #8A8A8A;
+}
+.modal-hr{
+   color: rgba(0, 0, 0, 0.39);
+}
+.subtotal{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+.subtotal h2, p{
+   font-family: volkhov;
+   color: black;
+}
+.subtotal-checkout{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.checkout-btn{
+   border: none;
+   background-color: black;
+   color: white;
+   width: 610px;
+   height: 66px;
+   border-radius: 10px;
+   margin-top: 20px;
+   font-size: 20px;
+}
+.subtotal-checkout h3{
+   font-family: volkhov;
+   text-decoration: underline;
+   color: black;
+   font-size: 23px;
+   font-weight: lighter;
+   margin-top: 15px;
 }
