@@ -11,11 +11,30 @@ function getProduct(id){
             <img src="${data.image}" alt="" class="product-image">
             <div class="product-description-block">            
             
-                <p class="logo-product-block">Fasco</p>
+                <p class="logo-product-block">FASCO</p>
                 <h2 class="product-name">${data.title}</h2>
-                <p class="product-rating">${data.rating.rate}</p>
+                <p class="product-rating">${data.rating.rate} ★</p>
                 <h2 class="product-price">${data.price + `$`}</h2>
                 <p class="product-description">${data.description}</p>
+                <p class="product-size">Size: <span class="size-span">M</span></p>
+                <div class="product-size-container">
+                    <button class="product-size-button">XS</button>
+                    <button class="product-size-button">S</button>
+                    <button class="product-size-button active-size">M</button>
+                    <button class="product-size-button">L</button>
+                    <button class="product-size-button">XL</button>
+                </div>
+                <div class="add-to-cart-block">
+                    <p class="product-quantity-title">Quantity</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-picker">
+                            <button class="quantity-minus quantity-button">-</button>
+                            <p class="product-quantity">1</p>
+                            <button class="quantity-plus quantity-button">+</button>
+                        </div>
+                        <button class="add-to-cart-button">Add to cart</button>
+                    </div>
+                </div>
             </div>
             `
         })

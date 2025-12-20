@@ -11,6 +11,7 @@
     align-items: center;
     height: 58px;
     margin-top: 70px;
+    margin-bottom: 78px;
 }
 .container{
     max-width: 1280px;   
@@ -21,6 +22,7 @@
     font-size: 52px;
     font-weight: 400;
     color: #484848;
+    text-decoration: none;
 }
 .navbar{
     display: flex;
@@ -32,9 +34,131 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    line-height: 24px;
 }
 .header-icons-container{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.active{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
+}
+.product-page-container{
+    display: flex;
+}
+.product-image{
+    margin-right: 80px;
+}
+.logo-product-block{
+    color: #666666;
+    font-family: Volkhov;
+    font-size: 14px;
+    font-weight: 400;
+}
+.product-name{
+    color: black;
+    font-family: Volkhov;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 44px;
+}
+.product-rating{
+    margin-bottom: 20px;
+}
+.product-price{
+    font-size: 24px;
+    font-family: Volkhov;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 30px;
+}
+.product-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: #8A8A8A;
+    margin-bottom: 30px;
+}
+.product-description-block{
+    max-width: 585px;
+}
+.product-size{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: Volkhov;
+    margin-bottom: 12px;
+}
+.size-span{
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    font-family: Volkhov;
+    margin-bottom: 12px;
+}
+.product-size-button{
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+    border: 1px solid #EEEEEE;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+}
+.active-size{
+    border: none;
+    background-color: black;
+    color: white;
+}
+.product-size-container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 19px;
+}
+.product-quantity-title{
+    color: black;
+    font-size: 16px;
+    font-family: Volkhov;
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+.quantity-picker{
+    width: 128px;
+    height: 46px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quantity-button{
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 0 18px 0 18px;
+    width: 47px;
+    cursor: pointer;
+    height: 46px;
+}
+.add-to-cart-button{
+    color: black;
+    font-size: 16px;
+    font-family: Volkhov;
+    font-weight: 400;
+    border: 1px solid black;
+    background-color: white;
+    width: 442px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-to-cart-container{
+    display: flex;
+    gap: 30px;
 }
