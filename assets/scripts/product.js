@@ -1,28 +1,69 @@
 const URL = `https://fakestoreapi.com/products/`
 
 const productPageContainer = document.querySelector('.product-page-container');
-
+let quantityCounter = 1;
 function quantityCount(){
     const productQuantity = document.querySelector('.product-quantity');
     const quantityPlus = document.getElementById('quantity-plus');
     const quantityMinus = document.getElementById('quantity-minus');
-    let quantityCounter = 1;
+  
 
     console.log(quantityPlus);
 
     quantityPlus.addEventListener('click', ()=>{
-        if(quantityCounter < 11){
-            productQuantity.innerHTML = quantityCounter++;
+        if(quantityCounter < 10){
+            productQuantity.innerHTML = ++quantityCounter;
         }
        
     })
 
     quantityMinus.addEventListener('click', ()=>{
-        if(quantityCounter > 0){
-            productQuantity.innerHTML = quantityCounter--;
+        if(quantityCounter > 1){
+            productQuantity.innerHTML = --quantityCounter;
         }
 
     })
+}
+function addingToCart(){
+    const addToCartBtn = document.querySelector('.add-to-cart-button');
+
+    addToCartBtn.addEventListener('click', ()=>{
+        if(localStorage.getItem("cart")){
+            const savedCart = JSON.parse(localStorage.getItem("cart"));
+
+            savedCart.forEach((product) => {
+            if(product.id === id){
+                product.count = quantityCounter;
+            }else{
+            savedCart.push({
+                id: id,
+                count: quantityCounter
+            });
+        }
+        });
+            console.log(savedCart);
+
+            localStorage.setItem("cart", JSON.stringify(savedCart))
+            
+        }else{
+            const cart = [
+                {
+                    id: id, 
+                    count: quantityCounter
+                }
+            ]
+        localStorage.setItem("cart", JSON.stringify(cart))   
+        }
+        console.log(localStorage.getItem("cart") );
+        
+
+    })   
+}
+
+
+function sizePicking(){
+    const pickedSize = document.querySelector('.size-span');
+    
 }
 
 function getProduct(id){
@@ -60,7 +101,8 @@ function getProduct(id){
                 </div>
             </div>
             `
-            quantityCount()            
+            quantityCount();     
+            addingToCart();       
         })
 ;
             
@@ -73,12 +115,3 @@ console.log(id);
 getProduct(id);
 
 
-
-
-
-
-// const addToCartBtn = document.querySelector('.add-to-cart-button');
-
-// addToCartBtn.addEventListener('click', ()=>{
-//     localStorage.setItem
-// })
