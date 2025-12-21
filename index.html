@@ -71,24 +71,28 @@
    <div class="modal">
       <div class="modal-container">
          <h1>Shopping cart</h1>
+         <button class="close-modal-btn">✕</button> <!--how did it know -->
          <p>Buy <span>$122.35</span> More And Get <span>Free Shipping</span></p>
-         <div class="product-info">
-            <div class="product-image">
-               placeholder
-            </div>  
-            <div class="product-info-less">
-               <h2>Denim Jacket</h4>
-               <p>$14.80</p>
-               <div class="amount">
-                  <button class="btn-take-product">-</button>
-                  <span class="product-amount">01</span>
-                  <button class="btn-add-product">+</button>
+         <div class="product-list">
+            <div class="product-info">
+               <div class="product-image">
+                  <img class="product-image" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="">
+               </div>
+               <div class="product-info-less">
+                  <h4>Denim Jacket</h4>
+                     <p>$14.80</p>
+                     <div class="amount">
+                        <button class="btn-take-product">-</button>
+                        <span class="product-amount">01</span>
+                        <button class="btn-add-product">+</button>
+                     </div>
                </div>
             </div>
          </div>
+
          <hr class="modal-hr">
          <div class="modal-info-bottom">
-            <h3>For <span>$10.00</span> Please Wrap The Product</h3>
+            <h3><span class="thick">▢</span>   For <span class="mib-span">$10.00</span> Please Wrap The Product</h3>
          </div>
          <hr class="modal-hr">
          <div class="subtotal">
@@ -103,5 +107,6 @@
    </div>
 
    <script src="./assets/scripts/main.js"></script>
+   <script src="./assets/scripts/modal-backet.js"></script>
 </body>
 </html>
