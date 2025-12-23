@@ -15,6 +15,7 @@
    align-items: center;
    justify-content: space-between;
    margin-top: 70px;
+   margin-bottom: 94px;
 }
 .logo{
    font-family: 'Volkhov';
@@ -44,4 +45,128 @@
    color: #fff;
    cursor: pointer;
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.new-arrivals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.new-arrivals-title{
+    font-size: 46px;
+    font-family: 'Volkhov';
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+.new-arrivals-text{
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 614px;
+    margin-bottom: 50px;
+}
+.new-arrivals-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1155px;
+    gap: 30px;
+}
+.new-arrivals-button{
+    width: 207px;
+    height: 56px;
+    border: none;
+    background-color: #FAFAFA;
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.active{
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 20px 35px 0px #00000026;
+}
+.ultimate-sale-container{
+   width: 100%;
+   height: 756px;
+   display: flex;
+   gap: 35px;
+   margin-bottom: 27px;
+}
+.ultimate-sale-pic-bg{
+   background-color: #E0E0E0;
+}
+.ultimate-sale-pic-1-bg, .ultimate-sale-pic-2-bg{
+   width: 392px;
+   height: 756px;   
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+}
+.ultimate-sale-pic-3-bg, .ultimate-sale-pic-4-bg{
+   width: 426px;
+   height: 150px;
+}
+.ultimate-sale-pic{
+   border-radius: 10px;
+}
+.ultimate-sale-pic-3-bg{
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+}
+.ultimate-sale-pic-3{
+   width: 399px;
+   height: 145px;
+}
+.ultimate-sale-title-1{
+   font-size: 91px;
+   font-weight: 500;
+   line-height: 91px;
+}
+.ultimate-sale-title-2{  
+   line-height: 187px;
+   font-size: 187px;
+   font-weight: 500;
+   -webkit-text-stroke: 1px #484848;
+   color: white;
+}
+.ultimate-sale-middle-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.ultimate-sale-text{
+   font-size: 20px;
+   font-weight: 400;
+   letter-spacing: 2px;
+   margin-bottom: 19px;
+}
+.ultimate-sale-text-block{
+   width: 383px;
+   height: 396px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.ultimate-sale-button{
+   width: 207px;
+   height: 56px;
+   background-color: #000;
+   border: none;
+   border-radius: 10px;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;
+}
+.logos-container{
+   align-items: center;
+   width: 100%;
+   height: 200px;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 100px;
 }
