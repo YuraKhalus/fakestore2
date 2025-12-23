@@ -79,3 +79,50 @@ fetch(`${URL}/products`)
             </div>`
       });
    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    document.querySelectorAll('.quantity').forEach(qty => {
+//     const minus = qty.querySelector('.minus');
+//     const plus = qty.querySelector('.plus');
+//     const value = qty.querySelector('.qty-value');
+
+//     let count = 1;
+
+//     const update = () => {
+//         value.textContent = count.toString().padStart(2, '0');
+//     };
+
+//     plus.addEventListener('click', () => {
+//         if (count < 10) {
+//             count++;
+//             update();
+//         }
+//     });
+
+//     minus.addEventListener('click', () => {
+//         if (count > 1) {
+//             count--;
+//             update();
+//         }
+//     });
+
+//     update();
+// });

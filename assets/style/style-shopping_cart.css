@@ -18,12 +18,12 @@
     line-height: 32px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     text-transform: capitalize;
     color: #000000;
 }
 
-.descryption_position{
+.descryption_position {
     position: absolute;
     width: 212.36px;
     height: 24.75px;
@@ -37,7 +37,7 @@
     color: #000000;
 }
 
-.cart_container{
+.cart_container {
     margin-top: 228px;
 
 }
@@ -78,21 +78,21 @@
     margin-left: 45px;
 } */
 
-.line{
+.line {
     margin-top: 35px;
 }
 
-.card{
+.card {
     width: 100%;
     height: 225px;
     margin-top: 35px;
     margin-bottom: 35px;
     display: flex;
     /* justify-content: space-between; */
-    
+
 }
 
-.block{
+.block {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -100,7 +100,7 @@
 
 }
 
-.title_card{
+.title_card {
     margin-left: 190px;
     font-family: 'Volkhov';
     font-style: normal;
@@ -111,7 +111,7 @@
     color: #000000;
 }
 
-.text_color{
+.text_color {
     margin-left: 190px;
     font-family: Volkhov;
     margin-top: 14px;
@@ -130,14 +130,14 @@
     color: #8A8A8A;
 }
 
-.card_photo{
+.card_photo {
     position: absolute;
     width: 168px;
     height: 225px;
     object-fit: cover;
 }
 
-.remove_text{
+.remove_text {
     margin-left: 190px;
     margin-top: 70px;
     text-decoration: underline;
@@ -156,9 +156,10 @@
     text-decoration-line: underline;
     text-transform: capitalize;
     color: #8A8A8A;
+    cursor: pointer;
 }
 
-.price_card{
+.price_card {
     /* margin-left: 120px; */
     position: absolute;
     width: 66px;
@@ -173,9 +174,9 @@
     text-align: center;
     text-transform: capitalize;
     color: #000000;
-}   
+}
 
-.photo_block{
+.photo_block {
     display: inline-block;
     /* width: 366px; */
     height: 225px;
@@ -183,7 +184,7 @@
     min-width: 366px;
 }
 
-.block_price{
+.block_price {
     display: inline-block;
     width: 100px;
     height: 225px;
@@ -192,8 +193,175 @@
 
 }
 
-.cards_items{
+.cards_items {
     display: flex;
     justify-content: space-between;
     margin-top: 73.25px;
+}
+
+.checkbox {
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #000000;
+    cursor: pointer;
+}
+
+.checkout_box {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.text_checkbox {
+    width: 386px;
+    height: 42px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #8A8A8A;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* ChatGPT */
+
+/* .block_quantity {
+    width: 140px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    font-family: 'Jost';
+}
+
+.qty-btn {
+    width: 35px;
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.qty-value {
+    min-width: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+} */
+
+/* ChatGPT */
+
+.line2 {
+    margin-top: 35px;
+}
+
+.line3 {
+    width: 613px;
+    height: 1px;
+}
+
+.checkbox_Block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 613px;
+    margin-bottom: 9px;
+}
+
+.priceInText {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: 'Popins';
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 22px;
+    /* leading-trim: NONE; */
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+
+.Subtotal,
+.price_subtotal {
+    color: #000000;
+    font-family: Volkhov;
+    justify-content: start;
+    height: 32px;
+    ;
+}
+
+.checkout_Block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 36px;
+    width: 613px;
+}
+
+.ckeckoutBtn {
+    width: 610px;
+    height: 66px;
+    margin-top: 30px;
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-family: Poppins;
+}
+
+.subtotal_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.view_Car_text{
+    margin-top: 20px;
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 42px;
+    text-align: center;
+    color: #8A8A8A;
+    text-decoration: underline;
+    cursor: pointer;
 }
