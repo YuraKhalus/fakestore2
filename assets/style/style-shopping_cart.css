@@ -365,3 +365,25 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+.quantity-picker{
+    width: 128px;
+    height: 46px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-button{
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 0 18px 0 18px;
+    width: 47px;
+    cursor: pointer;
+    height: 46px;
+}
