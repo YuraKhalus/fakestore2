@@ -11,28 +11,6 @@ closebtn.addEventListener('click', function () {
 })
 
 
-fetch('https://fakestoreapi.com/products/1')
-    .then(response => response.json())
-    .then(data => {
-        productlist.innerHTML = ``
-        productlist.innerHTML = `<div class="product-info">
-               <div class="product-image">
-                  <img class="product-image" src="${data.image}">
-               </div>
-               <div class="product-info-less">
-                  <h4>${data.title}</h4>
-                     <p>$${data.price}</p>
-                     <div class="amount">
-                        <button class="btn-take-product">-</button>
-                        <span class="product-amount">01</span>
-                        <button class="btn-add-product">+</button>
-                     </div>
-               </div>
-            </div>`
-        counter()
-
-    });
-
 function counter() {
     const addProduct = document.querySelector('.btn-add-product');
     const takeProduct = document.querySelector('.btn-take-product');
@@ -58,6 +36,32 @@ function counter() {
     });
 }
 
+function getLScart() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    cart.forEach((product) => {
+        fetchProduct(product.id)
+    });
+}
+getLScart();
 
-
-
+function fetchProduct(id) {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            productlist.innerHTML += `<div class="product-info">
+               <div class="product-image">
+                  <img class="product-image" src="${data.image}">
+               </div>
+               <div class="product-info-less">
+                  <h4>${data.title}</h4>
+                     <p>$${data.price}</p>
+                     <div class="amount">
+                        <button class="btn-take-product">-</button>
+                        <span class="product-amount">01</span>
+                        <button class="btn-add-product">+</button>
+                     </div>
+               </div>
+            </div>`
+            counter()
+        });
+}
