@@ -3,8 +3,6 @@ const modalblock = document.querySelector('.modal');
 const closebtn = document.querySelector('.close-modal-btn');
 const productlist = document.querySelector('.product-list');
 
-
-
 modalbtn.addEventListener('click', function () {
     modalblock.style.display = 'block';
 })
@@ -23,7 +21,7 @@ fetch('https://fakestoreapi.com/products/1')
                </div>
                <div class="product-info-less">
                   <h4>${data.title}</h4>
-                     <p>${data.price}</p>
+                     <p>$${data.price}</p>
                      <div class="amount">
                         <button class="btn-take-product">-</button>
                         <span class="product-amount">01</span>
@@ -31,7 +29,35 @@ fetch('https://fakestoreapi.com/products/1')
                      </div>
                </div>
             </div>`
+        counter()
+
     });
+
+function counter() {
+    const addProduct = document.querySelector('.btn-add-product');
+    const takeProduct = document.querySelector('.btn-take-product');
+
+    let productNumber = document.querySelector('.product-amount');
+
+    let productCount = 1;
+
+    addProduct.addEventListener('click', () => {
+        if (productCount >= 10){
+            alert('limit is 10!')
+        } else {
+            productNumber.innerText = ++productCount;
+        }
+    })
+    takeProduct.addEventListener('click', () => {
+        if (productCount <= 1) {
+            alert('Please enter some products');
+        } else {
+            productCount--;
+        }
+        productNumber.innerText = productCount;
+    });
+}
+
 
 
 
