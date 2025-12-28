@@ -42,7 +42,7 @@ fetch(`${URL}/products`)
       products_box.innerHTML = '';
       listOfCategoryProducts.forEach(product => {
          products_box.innerHTML += `
-            <div class="product">
+            <a href="./product/index.html?id=${product.id}" class="product">
                <div class="product_photo">
                   <img src="${product.image}" alt="CardPhoto" class="product_photo_img">
                </div>
@@ -99,9 +99,10 @@ fetch(`${URL}/products`)
 
                   </div>
                </div>
-            </div>`
+            </a>`
       });
    })
 }
 getProduct()
+
 
