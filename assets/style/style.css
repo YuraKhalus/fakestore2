@@ -147,6 +147,7 @@
     display: flex;
     gap: 0;
     margin-left: 266px;
+}
 .new-arrivals{
     display: flex;
     flex-direction: column;

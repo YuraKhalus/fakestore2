@@ -33,14 +33,14 @@ const category = [
 
 // const listOfCategoryProducts = [];
 
-function getProduct(index){
+function getProduct(index = 1){
 fetch(`${URL}/products`)
    .then(response => response.json())
    .then(data => {
       const listOfCategoryProducts = data.filter(product => product.category === category[index])
       console.log(listOfCategoryProducts);
+      products_box.innerHTML = '';
       listOfCategoryProducts.forEach(product => {
-         console.log(product);
          products_box.innerHTML += `
             <div class="product">
                <div class="product_photo">
@@ -103,4 +103,5 @@ fetch(`${URL}/products`)
       });
    })
 }
+getProduct()
 
