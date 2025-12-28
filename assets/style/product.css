@@ -162,3 +162,46 @@
     display: flex;
     gap: 30px;
 }
+.footer{
+   width: 100%;
+   height: 138px;
+   border-top: 1px solid #DEDFE1;
+   margin-top: 150px;
+   margin-bottom: 23px;
+}
+.footer-container{
+   margin: auto;
+   margin-top: 30px;
+   width: 1280px;
+   height: 108px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.footer-logo{
+   font-family: Volkhov;
+   font-size: 32px;
+   font-weight: 400;
+   text-decoration: none;
+}
+.footer-links{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 50px;
+}
+.footer-nav{
+   display: flex;
+   width: 598px;
+   gap: 38px;
+}
+.footer-link{
+   text-decoration: none;
+   font-weight: 400;
+   font-size: 16px;
+}
+.copyright{
+   margin: auto;
+   font-size: 12px;
+   font-weight: 400;
+}
