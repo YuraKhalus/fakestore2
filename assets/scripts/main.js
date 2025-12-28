@@ -33,27 +33,75 @@ const category = [
 
 // const listOfCategoryProducts = [];
 
-function getProduct(index){
+function getProduct(index = 1){
 fetch(`${URL}/products`)
    .then(response => response.json())
    .then(data => {
       const listOfCategoryProducts = data.filter(product => product.category === category[index])
       console.log(listOfCategoryProducts);
+      products_box.innerHTML = '';
       listOfCategoryProducts.forEach(product => {
-         console.log(product);
          products_box.innerHTML += `
             <div class="product">
-               <img src="${product.image}" alt="" class="product_photo">
-               <div class="product_details">
-                  <h3 class="product_name">
-                     ${product.title}
-                  </h3>
-                  <span class="product_raiting">${product.rating.rate}</span>
-                  <h3 class="product_price">${product.price}$</h3>
+               <div class="product_photo">
+                  <img src="${product.image}" alt="CardPhoto" class="product_photo_img">
                </div>
-            </div>
-         `
+
+               <div class="product_detsils">
+                  <div class="product_main_information">
+                     <h3 class="product_name">
+                        ${product.title}
+                     </h3>
+                     <h4 class="descryption">
+                        ${product.category}
+                     </h4>
+                  </div>
+
+                  <div class="info">
+                     <h4 class="reviews">(${product.rating.count}) Customer Reviews</h4>
+                  </div>
+
+                  <div class="price">
+                     <h3 class="price_text">
+                        $${product.price}
+                     </h3>
+                  </div>
+
+                  <div class="product_raiting">
+                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.6646 7.12771L9.5 0L7.33536 7.12771H0L5.93479 11.742L3.73214 19L9.5 14.5146L15.2679 19L13.0652 11.742L19 7.12771H11.6646Z"
+                           fill="#FCA120" />
+                     </svg>
+                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.6646 7.12771L9.5 0L7.33536 7.12771H0L5.93479 11.742L3.73214 19L9.5 14.5146L15.2679 19L13.0652 11.742L19 7.12771H11.6646Z"
+                           fill="#FCA120" />
+                     </svg>
+
+                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.6646 7.12771L9.5 0L7.33536 7.12771H0L5.93479 11.742L3.73214 19L9.5 14.5146L15.2679 19L13.0652 11.742L19 7.12771H11.6646Z"
+                           fill="#FCA120" />
+                     </svg>
+
+                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.6646 7.12771L9.5 0L7.33536 7.12771H0L5.93479 11.742L3.73214 19L9.5 14.5146L15.2679 19L13.0652 11.742L19 7.12771H11.6646Z"
+                           fill="#FCA120" />
+                     </svg>
+
+                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.6646 7.12771L9.5 0L7.33536 7.12771H0L5.93479 11.742L3.73214 19L9.5 14.5146L15.2679 19L13.0652 11.742L19 7.12771H11.6646Z"
+                           fill="#FCA120" />
+                     </svg>
+
+                  </div>
+               </div>
+            </div>`
       });
    })
 }
+getProduct()
 
