@@ -85,8 +85,13 @@
 
 .product_name{
     margin-top: 271px;
-    fonT-size: 20px;
+    font-size: 20px;
     margin-left: 25px;
+    max-width: 340px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .descryption{
