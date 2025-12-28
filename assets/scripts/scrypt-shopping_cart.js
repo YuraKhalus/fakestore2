@@ -2,12 +2,10 @@
 
 const cards = document.querySelector('.cards');
 
-fetch(`https://fakestoreapi.com/products`)
+function addProductToCart(productID) {
+    fetch(`https://fakestoreapi.com/products/${productID}`)
     .then(respone => respone.json())
-    .then(data => {
-
-        const product = data[0];
-        console.log(product);
+    .then(product => {
         cards.innerHTML += `
                 <div class="card">
                <div class="photo_block">
@@ -42,6 +40,9 @@ fetch(`https://fakestoreapi.com/products`)
 quantityCount();
 totalByProduct()
 })
+}
+
+
 
 
 
@@ -83,3 +84,19 @@ function totalByProduct() {
     console.log(productPrice);
     
 }
+
+
+function getCart() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    console.log(cart);
+    
+    if (cart) {
+        cart.forEach(productID => {
+            addProductToCart(productID.id);
+        })
+    }
+
+}
+
+getCart()
+
