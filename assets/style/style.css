@@ -317,3 +317,23 @@
    color: black;
    font-weight: lighter;
 }
+.delete-product{
+   justify-content: right;
+   align-items: center;
+   margin-top: 20px;
+   margin-left: 320px;
+}
+.delete-product button{
+   border: none;
+   background: none;
+   padding: 5px;
+   transition: ease-in-out 100ms;
+}
+
+.delete-product button:hover{
+   border-radius: 8px;
+   border: solid 3px #9a3a3a;
+   color: #9a3a3a;
+   font-weight: bold;
+   cursor: pointer;
+}

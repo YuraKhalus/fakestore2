@@ -2,6 +2,7 @@ const modalbtn = document.querySelector('.ultimate-sale-button');
 const modalblock = document.querySelector('.modal');
 const closebtn = document.querySelector('.close-modal-btn');
 const productlist = document.querySelector('.product-list');
+const deletebtn = document.querySelector('.delete-btn');
 
 modalbtn.addEventListener('click', function () {
     modalblock.style.display = 'block';
@@ -38,6 +39,8 @@ function counter() {
 
 function getLScart() {
     const cart = JSON.parse(localStorage.getItem('cart'));
+    productlist.innerHTML = '';
+    console.log(cart);
     cart.forEach((product) => {
         fetchProduct(product.id)
     });
@@ -57,11 +60,42 @@ function fetchProduct(id) {
                      <p>$${data.price}</p>
                      <div class="amount">
                         <button class="btn-take-product">-</button>
-                        <span class="product-amount">01</span>
+                        <span class="product-amount">1</span>
                         <button class="btn-add-product">+</button>
                      </div>
+                     <div class="delete-product">
+                     <button class="delete-btn" data-productID="${data.id}">Delete
+                     </button>
+                  </div>
                </div>
             </div>`
             counter()
+            deleteProduct()
         });
 }
+
+function deleteProduct (){
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    const deleteBtns = document.querySelectorAll('.delete-btn');
+    deleteBtns.forEach(deleteBtn => {
+        deleteBtn.addEventListener('click', () => {
+            let productId = deleteBtn.getAttribute('data-productID');
+            // console.log(productId);
+            // console.log(cart)
+            for(let i = 0; i < cart.length; i++) {
+                // console.log(cart[i]);
+                if (cart[i].id == productId) {
+                    cart.splice(i, 1);
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    console.log(cart);
+                    break;
+                }
+            }
+            getLScart()
+        })
+    })
+}
+
+
+
