@@ -19,7 +19,7 @@ fetch(`https://fakestoreapi.com/products`)
                </div>
                <div class="block">
                   <div class="block_price">
-                     <h3 class="price_card">$${product.price}</h3>
+                     <h3 class="price_card">$<span class="priceNumber">${product.price}</span></h3>
                   </div>
                   
                   <div class="block_quantity">
@@ -40,6 +40,7 @@ fetch(`https://fakestoreapi.com/products`)
 `
 
 quantityCount();
+totalByProduct()
 })
 
 
@@ -59,15 +60,26 @@ function quantityCount() {
         
         if (quantity < 10) {
             productQuantity.innerText = ++quantity;
+            totalByProduct();
         }
         
     })
     quantityCounterMinus.addEventListener('click', () => {
         if (quantity > 1) {
             productQuantity.innerText = --quantity;
+            totalByProduct();
         } 
     })
 }
 
 
 
+function totalByProduct() {
+    let productPrice = +document.querySelector('.priceNumber').innerHTML;
+    let productQuantity = +document.querySelector('.product-quantity').innerHTML;
+    let total = document.querySelector(".total_card");
+    let totalPrice = productPrice * productQuantity;
+    total.innerText = `$${totalPrice.toFixed(2)}`;
+    console.log(productPrice);
+    
+}
