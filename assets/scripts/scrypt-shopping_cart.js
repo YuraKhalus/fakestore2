@@ -16,7 +16,7 @@ function addProductToCart(productID) {
                   <h3 class="title_card">${product.title}</h3>
 
                   <h3 class="text_color">Color: Red</h3>
-                  <h3 class="remove_text">Remove</h3>
+                  <h3 class="remove_text" data-removeid="${product.id}">Remove</h3>
                </div>
                <div class="block">
                   <div class="block_price">
@@ -40,7 +40,7 @@ function addProductToCart(productID) {
 cards.append(cardItem);
 
 setupCardLogic(cardItem, product.price)
-
+removeBtnLogic()
 })
 }
 
@@ -63,6 +63,7 @@ function setupCardLogic(cardElement, price) {
         let total = price * quantity;
 
         totalText.innerText = `$${total.toFixed(2)}`;
+         updateSubtotal();
     }
 
     quantityCounterPlus.addEventListener('click', () => {
@@ -78,6 +79,10 @@ function setupCardLogic(cardElement, price) {
             updatePrice();
         } 
     })
+
+
+
+   
 }
 
 
@@ -96,7 +101,39 @@ function getCart() {
     }
 
 }
-localStorage.setItem('cart', JSON.stringify([1, 2, 3,]));
+// localStorage.setItem('cart', JSON.stringify([1, 2, 3,]));
 
 getCart()
 
+function updateSubtotal() {
+    const totalCards = document.querySelectorAll('.card');
+    let subtotal = 0;
+
+    totalCards.forEach(card => {
+        const totalText = card.querySelector('.total_card');
+        const totalValue = parseFloat(totalText.innerText.replace('$', ''));
+        subtotal += totalValue;
+    });
+
+
+    const subtotalElement = document.querySelector('.price_subtotal');
+    subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
+
+}
+
+function removeBtnLogic() {
+    let removeBtns = document.querySelectorAll(".remove_text");
+
+    removeBtns.forEach(removeBtn => {
+        removeBtn.addEventListener('click', () => {
+            const removeID = removeBtn.getAttribute('data-removeid');
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart = cart.filter(id => id != removeID);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cards.innerHTML = '';
+            getCart();
+            console.log("delete");
+            
+        })
+    })
+}
