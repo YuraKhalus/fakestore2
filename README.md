@@ -8,6 +8,7 @@ This project was developed by:
 - [**[Name]**](https://github.com/username1) – Frontend development  
 - [**[Yurii Khalus]**](https://github.com/YuraKhalus) – Team Leader, Architect, Teacher
 - [**[Olena]**](https://github.com/hhxdz) – Frontend development  
+- [**[Dima]**](https://github.com/frzauxddd) - Fronted development 
 
 
 # Pages
