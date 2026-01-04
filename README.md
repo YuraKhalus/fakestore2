@@ -11,6 +11,7 @@ This project was developed by:
 - [**[Dima]**](https://github.com/frzauxddd) - Fronted development 
 
 
+
 # Pages
 
 
@@ -18,6 +19,9 @@ This project was developed by:
 Author: **[Olena]**
 ### What was done:
 - Home page layout
+- Page title and description (Olena)
+- Getting information about products from API (Olena)
+- Button script (Olena)
 
 ## Product page
 Author: **[Olena]**
@@ -27,11 +31,9 @@ Author: **[Olena]**
 - Page script
 
 ## Cart page
-Author: **[Olena]** and **[Roman]**
+Author: **[Roman]**
 ### What was done:
-- Page title and description (Olena)
-- Getting information about products from API (Olena)
-- Button script (Olena)
+
 
 ## Cart modal
 Author: **[Dima]** 
