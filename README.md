@@ -19,9 +19,9 @@ This project was developed by:
 Author: **[Olena]**
 ### What was done:
 - Home page layout
-- Page title and description (Olena)
-- Getting information about products from API (Olena)
-- Button script (Olena)
+- Page title and description
+- Getting information about products from API
+- Button script
 
 ## Product page
 Author: **[Olena]**
@@ -43,3 +43,7 @@ Author: **[Dima]**
 - Possibility to keep and delete products from modal
 
 ## Checkout page
+Author: **[Olena]**
+### What was done:
+- Page layout
+- Page script
