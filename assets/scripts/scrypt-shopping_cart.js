@@ -22,9 +22,9 @@ function addProductToCart(productID) {
                   
                   <div class="block_quantity">
                      <div class="quantity-picker">
-                        <button class="quantity-button" id="quantity-minus">-</button>
+                        <button class="quantity-button quantity-minus" id="">-</button>
                         <p class="product-quantity">1</p>
-                        <button class="quantity-button" id="quantity-plus">+</button>
+                        <button class="quantity-button quantity-plus" id="">+</button>
                     </div>
 
                   </div>
@@ -51,9 +51,9 @@ totalByProduct()
 
 function quantityCount() {
 
-    let quantityCounterMinus = document.getElementById('quantity-minus');
-    let quantityCounterPlus = document.getElementById('quantity-plus');
-    let productQuantity = document.querySelector('.product-quantity');
+    let quantityCounterMinus = cards.querySelector('.quantity-minus');
+    let quantityCounterPlus = cards.querySelector('.quantity-plus');
+    let productQuantity = cards.querySelector('.product-quantity');
     let quantity = 1;
 
     quantityCounterPlus.addEventListener('click', () => {
@@ -92,11 +92,12 @@ function getCart() {
     
     if (cart) {
         cart.forEach(productID => {
-            addProductToCart(productID.id);
+            addProductToCart(productID);
         })
     }
 
 }
+localStorage.setItem('cart', JSON.stringify([1, 2, 3,]));
 
 getCart()
 

@@ -387,3 +387,18 @@
     cursor: pointer;
     height: 46px;
 }
+
+/* .block_quantity {
+    position: relative;
+    z-index: 5;
+}
+
+.quantity-picker {
+    position: relative;
+    z-index: 10;
+}
+
+.quantity-button {
+    position: relative;
+    z-index: 20;
+} */
