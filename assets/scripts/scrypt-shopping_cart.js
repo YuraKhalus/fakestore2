@@ -6,8 +6,11 @@ function addProductToCart(productID) {
     fetch(`https://fakestoreapi.com/products/${productID}`)
     .then(respone => respone.json())
     .then(product => {
-        cards.innerHTML += `
-                <div class="card">
+
+        const cardItem = document.createElement('div');
+        cardItem.classList.add('card');
+        cardItem.innerHTML = `
+                
                <div class="photo_block">
                   <img class="card_photo" src="${product.image}" alt="">
                   <h3 class="title_card">${product.title}</h3>
@@ -33,12 +36,11 @@ function addProductToCart(productID) {
                      <h3 class="total_card">$14.90</h3>
                   </div>
                </div>
-
-            </div>
 `
+cards.append(cardItem);
 
-quantityCount();
-totalByProduct()
+setupCardLogic(cardItem, product.price)
+
 })
 }
 
@@ -49,41 +51,38 @@ totalByProduct()
 
 
 
-function quantityCount() {
+function setupCardLogic(cardElement, price) {
 
-    let quantityCounterMinus = cards.querySelector('.quantity-minus');
-    let quantityCounterPlus = cards.querySelector('.quantity-plus');
-    let productQuantity = cards.querySelector('.product-quantity');
+    let quantityCounterMinus = cardElement.querySelector('.quantity-minus');
+    let quantityCounterPlus = cardElement.querySelector('.quantity-plus');
+    let productQuantity = cardElement.querySelector('.product-quantity');
+    let totalText = cardElement.querySelector('.total_card');
     let quantity = 1;
 
-    quantityCounterPlus.addEventListener('click', () => {
+    const updatePrice = () => {
+        let total = price * quantity;
 
-        
+        totalText.innerText = `$${total.toFixed(2)}`;
+    }
+
+    quantityCounterPlus.addEventListener('click', () => {
         if (quantity < 10) {
             productQuantity.innerText = ++quantity;
-            totalByProduct();
+            updatePrice();
         }
         
     })
     quantityCounterMinus.addEventListener('click', () => {
         if (quantity > 1) {
             productQuantity.innerText = --quantity;
-            totalByProduct();
+            updatePrice();
         } 
     })
 }
 
 
 
-function totalByProduct() {
-    let productPrice = +document.querySelector('.priceNumber').innerHTML;
-    let productQuantity = +document.querySelector('.product-quantity').innerHTML;
-    let total = document.querySelector(".total_card");
-    let totalPrice = productPrice * productQuantity;
-    total.innerText = `$${totalPrice.toFixed(2)}`;
-    console.log(productPrice);
-    
-}
+
 
 
 function getCart() {
