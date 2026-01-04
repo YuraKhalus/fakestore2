@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #484848;
+}
+.top-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 58px;
+    margin-top: 70px;
+    width: 1280px;
+}
+.header-checkout-title{
+    margin-bottom: 44px;
+    font-size: 42px;
+    font-family: Volkhov;
+    font-weight: 400;
+    color: black;
+    margin-top: 58px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+}
+.checkout-page-container{
+    max-width: 607px;   
+    margin: auto;
+    margin-top: 81px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 36px;
+}
+.logo{
+    font-family: 'Volkhov';
+    font-size: 52px;
+    font-weight: 400;
+    color: #484848;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+.nav_link{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 24px;
+}
+.header-icons-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.title{
+    font-family: Volkhov;
+    font-size: 46px;
+    font-weight: 400;
+    margin-bottom: 26px;
+}
+.contact-text{
+    font-weight: 400;
+    font-size: 16px;
+}
+.login{
+    text-decoration: none;
+    color: #1456FF;
+}
+.input{
+    border: 1px solid #8A8A8A;
+    padding: 28px;
+    width: 607px;
+    height: 71px;
+}
+.short{
+    width: 305px;
+}
+.shorter{
+    width: 290px;
+}
+.delivery-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.top-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-block{
+    max-width: 607px;
+    max-height: 156px;
+}
+.delivery-containers{
+    display: flex;
+    gap: 12px;
+}
+.credit-card{
+    border: 1px solid #8A8A8A;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 607px;
+    height: 71px;
+    margin-bottom: 18px;
+}
+.payment-block{
+    max-width: 607px;
+    max-height: 460px;
+}
+.credit-card-text{
+    font-size: 16px;
+    font-weight: 400;
+}
+.payment-input-container{
+    height: 217px;
+    width: 567px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: auto;
+}
+.payments-container{
+    display: flex;
+    gap: 5px;
+}
+.short-payment{
+    max-width: 281px;
+    max-height: 67px;
+    border-radius: 4px;
+}
+.long-payment{
+    max-width: 567px;
+    max-height: 67px;
+    border-radius: 4px;
+}
+.payment-button{
+    color: white;
+    background-color: black;
+    width: 607px;
+    height: 66px;
+    border-radius: 10px;
+    margin-top: 34px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 36px;
+    border: none;
+}
+.copyright{
+    font-size: 14px;
+    font-weight: 400;
+    margin: auto;
+}

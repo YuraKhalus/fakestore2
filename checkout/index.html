@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/checkout.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-header-container">
+            <a href="../index.html" class="logo">FASCO</a><!-- fake store -->
+            <nav class="navbar">
+                <a href="#" class="nav_link">Home</a>
+                <a href="#" class="nav_link">Shop</a>
+                <a href="#" class="nav_link">Products</a>
+                <a href="#" class="nav_link">Pages</a>
+            </nav>
+            <div class="header-icons-container">
+                <a href="#" class="header-icon"><img src="../assets/images/header-icon1.png" alt=""></a>
+                <a href="#" class="header-icon"><img src="../assets/images/header-icon2.png" alt=""></a>
+                <a href="#" class="header-icon"><img src="../assets/images/header-icon3.png" alt=""></a>
+                <a href="#" class="header-icon"><img src="../assets/images/header-icon4.png" alt=""></a>
+            </div>
+        </div>
+        <h2 class="header-checkout-title">FASCO Demo Checkout</h2>
+        
+
+    </header>        
+    <section class="checkout-page">
+        <div class="checkout-page-container">
+            <div class="contact-block">
+                <div class="top-contact">
+                    <h2 class="title">Contact</h2>
+                    <p class="contact-text">Have an account?<a href="#" class="login">Log in</a></p>
+                </div>
+                <input type="email" placeholder="Email Address" class="long input">
+            </div>
+            <div class="delivery-block">
+                <h2 class="title">Delivery</h2>
+                <div class="delivery-info-container">
+                    <input type="text" placeholder="Country/Region" class="long input">
+                    <div class="delivery-containers">
+                        <input type="text" placeholder="First Name" class="shorter input">
+                        <input type="text" placeholder="Last Name" class="short input">
+                    </div>
+                     <input type="text" placeholder="Address" class="long input">
+                    <div class="delivery-containers">
+                        <input type="text" placeholder="City" class="shorter input">
+                        <input type="number" placeholder="Postal Code" class="short input">
+                    </div>
+                </div>
+            </div>
+            <div class="payment-block">
+                <h2 class="title">Payment</h2>
+                <div class="payment-container">
+                    <div class="credit-card">
+                        <p class="credit-card-text">Credit Card</p>
+                        <img src="../assets/images/card.png" alt="">
+                    </div>
+                </div>
+                <div class="payment-input-container">
+                    <input type="number" class="long-payment input" placeholder="Card Number">
+                    <div class="payment-containers">
+                        <input type="text" placeholder="Expiration Date" class="short-payment input">
+                        <input type="number" placeholder="Security Code" class="short-payment input">
+                    </div>
+                    <input type="text" class="long-payment input" placeholder="Card Holder Name">
+                </div>
+            </div>
+            <button class="payment-button">Pay Now</button>
+            <p class="copyright">Copyright © 2022 FASCO . All Rights Reseved.</p>
+        </div>
+    </section>   
+
+
+    <script src="../assets/scripts/checkout.js"></script>
+</body>
+</html>
+    
