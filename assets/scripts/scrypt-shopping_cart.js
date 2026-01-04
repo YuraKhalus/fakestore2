@@ -2,7 +2,7 @@
 
 const cards = document.querySelector('.cards');
 
-function addProductToCart(productID) {
+function addProductToCart(productID, quantity) {
     fetch(`https://fakestoreapi.com/products/${productID}`)
     .then(respone => respone.json())
     .then(product => {
@@ -26,7 +26,7 @@ function addProductToCart(productID) {
                   <div class="block_quantity">
                      <div class="quantity-picker">
                         <button class="quantity-button quantity-minus" id="">-</button>
-                        <p class="product-quantity">1</p>
+                        <p class="product-quantity">${quantity}</p>
                         <button class="quantity-button quantity-plus" id="">+</button>
                     </div>
 
@@ -40,7 +40,7 @@ function addProductToCart(productID) {
 cards.append(cardItem);
 
 setupCardLogic(cardItem, product.price)
-removeBtnLogic()
+removeBtnLogic(cardItem)
 })
 }
 
@@ -57,7 +57,7 @@ function setupCardLogic(cardElement, price) {
     let quantityCounterPlus = cardElement.querySelector('.quantity-plus');
     let productQuantity = cardElement.querySelector('.product-quantity');
     let totalText = cardElement.querySelector('.total_card');
-    let quantity = 1;
+    let quantity = Number(productQuantity.innerText);
 
     const updatePrice = () => {
         let total = price * quantity;
@@ -65,6 +65,7 @@ function setupCardLogic(cardElement, price) {
         totalText.innerText = `$${total.toFixed(2)}`;
          updateSubtotal();
     }
+    updatePrice();
 
     quantityCounterPlus.addEventListener('click', () => {
         if (quantity < 10) {
@@ -95,8 +96,10 @@ function getCart() {
     console.log(cart);
     
     if (cart) {
-        cart.forEach(productID => {
-            addProductToCart(productID);
+        cart.forEach(product => {
+            console.log(product);
+            
+            addProductToCart(product.id, product.count);
         })
     }
 
@@ -121,19 +124,17 @@ function updateSubtotal() {
 
 }
 
-function removeBtnLogic() {
-    let removeBtns = document.querySelectorAll(".remove_text");
-
-    removeBtns.forEach(removeBtn => {
+function removeBtnLogic(cardElement) {
+    let removeBtn = cardElement.querySelector(".remove_text");
+    
         removeBtn.addEventListener('click', () => {
             const removeID = removeBtn.getAttribute('data-removeid');
             let cart = JSON.parse(localStorage.getItem('cart'));
-            cart = cart.filter(id => id != removeID);
+            cart = cart.filter(product => product.id != removeID);
             localStorage.setItem('cart', JSON.stringify(cart));
             cards.innerHTML = '';
             getCart();
             console.log("delete");
-            
         })
-    })
+
 }
