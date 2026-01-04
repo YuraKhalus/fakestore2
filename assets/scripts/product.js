@@ -33,7 +33,7 @@ function addingToCart(){
 
             savedCart.forEach((product) => {
             if(product.id === id){
-                product.count = quantityCounter;
+                product.count += quantityCounter;
             }else{
             savedCart.push({
                 id: id,
@@ -56,6 +56,7 @@ function addingToCart(){
         }
         console.log(localStorage.getItem("cart") );
         
+        alert('Successfully added to cart!')
 
     })   
 }
