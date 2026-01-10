@@ -9,7 +9,7 @@ This project was developed by:
 - [**[Yurii Khalus]**](https://github.com/YuraKhalus) – Team Leader, Architect, Teacher
 - [**[Olena]**](https://github.com/hhxdz) – Frontend development  
 - [**[Dima]**](https://github.com/frzauxddd) - Fronted development
-- [**[Roman]**](https://github.com/Roma11RT) - Fronted develo
+- [**[Roman]**](https://github.com/Roma11RT) - Fronted development
 
 
 
